@@ -35,7 +35,7 @@ export class BaseApi {
         return config;
       },
       (error) => {
-        console.error('[Plugin SDK] Request error:', error);
+        // Request error - reject to be handled by caller
         return Promise.reject(error);
       }
     );

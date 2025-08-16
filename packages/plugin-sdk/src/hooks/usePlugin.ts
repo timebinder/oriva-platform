@@ -21,7 +21,7 @@ export function usePlugin(sdk: OrivaPluginSDK, options: UsePluginOptions = {}) {
   const { onError } = options;
 
   const handleError = useCallback((error: ApiError) => {
-    console.error('Plugin SDK Error:', error);
+    // Log error through callback for proper error handling
     onError?.(error);
   }, [onError]);
 
